@@ -40,10 +40,10 @@
         <div class="flex">
           <div class="max-w-xs">
             <label for="wallet" class="block text-sm font-medium text-gray-700"
-              >Тикер</label
+              >Тикер - {{ticker}}</label
             >
             <div class="mt-1 relative rounded-md shadow-md">
-              <input
+              <input v-model="ticker"
                 type="text"
                 name="wallet"
                 id="wallet"
@@ -414,7 +414,13 @@
 <script>
 export default {
   name: "App",
+
+  data() {
+    return {
+      ticker: "default",
+    };
+  },
 };
 </script>
 
- <style src="./app.css"></style>
+<style src="./app.css"></style>
